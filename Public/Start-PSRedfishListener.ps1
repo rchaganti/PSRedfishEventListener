@@ -118,6 +118,10 @@ function Start-PSRedfishListener
                     }
                         
                     $csvArray | Export-Csv -NoTypeInformation -Path $eventCsv -Encoding utf8 -Append -Force
+                    $response.StatusCode = 200
+                    $buffer = [System.Text.Encoding]::UTF8.GetBytes('Event Received')
+                    $response.ContentLength64 = $buffer.Length
+                    $response.OutputStream.Write($buffer, 0, $buffer.Length)
                 }
                 else
                 {
