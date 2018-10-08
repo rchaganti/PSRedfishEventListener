@@ -23,31 +23,29 @@ function Start-PSRedfishListener
     
     function Get-RequestBody
     {
-            [CmdletBinding()]
-            param
-            (
-                [Parameter(Mandatory = $true)]
-                [String]
-                $ContentType,
-        
-                [Parameter(Mandatory = $true)]
-                [System.Text.Encoding]
-                $ContentEncoding,
-        
-                [Parameter(Mandatory = $true)]
-                [System.IO.Stream]
-                $Body
-            )
-        
-            $streamReader = [System.IO.StreamReader]::new($Body)
-            $bodyContents = $StreamReader.ReadToEnd()
-        
-            $bodyContents = $BodyContents | ConvertFrom-Json
-        
-            return $bodyContents
-        }
-        
-    $Auth = [System.Net.AuthenticationSchemes]::Anonymous 
+        [CmdletBinding()]
+        param
+        (
+            [Parameter(Mandatory = $true)]
+            [String]
+            $ContentType,
+    
+            [Parameter(Mandatory = $true)]
+            [System.Text.Encoding]
+            $ContentEncoding,
+    
+            [Parameter(Mandatory = $true)]
+            [System.IO.Stream]
+            $Body
+        )
+    
+        $streamReader = [System.IO.StreamReader]::new($Body)
+        $bodyContents = $StreamReader.ReadToEnd()
+    
+        $bodyContents = $BodyContents | ConvertFrom-Json
+    
+        return $bodyContents
+    }   
     
     $routes = @{
         "/" = { 
