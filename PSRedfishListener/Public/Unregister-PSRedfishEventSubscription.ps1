@@ -13,7 +13,7 @@ function Unregister-PSRedfishEventSubscription
 
         [Parameter()]
         [String]
-        $SubscriptionId
+        $SubscriptionId = '*'
     )
 
     $subscriptions = Get-PSRedfishEventSubscription -IPAddress $IPAddress -Credential $Credential

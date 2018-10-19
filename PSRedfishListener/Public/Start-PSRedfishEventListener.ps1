@@ -1,4 +1,4 @@
-function Start-PSRedfishListener
+function Start-PSRedfishEventListener
 {
     [CmdletBinding()]
     param 

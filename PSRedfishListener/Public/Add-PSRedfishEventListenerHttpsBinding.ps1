@@ -1,4 +1,4 @@
-function Add-PSRedfishListenerHttpsBinding
+function Add-PSRedfishEventListenerHttpsBinding
 {
     [CmdletBinding()]
     param 

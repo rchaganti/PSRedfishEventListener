@@ -86,6 +86,6 @@ function Send-PSRedfishTestEvent
         }
 
         $requestBody = $mockMessage | ConvertTo-Json
-        Invoke-RestMethod -UseBasicParsing -Uri "https://${EventDestination}" -Method POST -Headers @{'Accept'='application/json'} -Body $requestBody -ContentType 'application/json'
+        Invoke-RestMethod -UseBasicParsing -Uri $EventDestination -Method POST -Headers @{'Accept'='application/json'} -Body $requestBody -ContentType 'application/json'
     }
 }

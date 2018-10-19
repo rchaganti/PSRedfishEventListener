@@ -1,14 +1,18 @@
-function Stop-PSredfishListener
+function Stop-PSRedfishEventListener
 {
     [CmdletBinding()]
     param 
     (
-        [Parameter(Mandatory = $true)]
+        [Parameter()]
         [String]
-        $EventDestination
+        $IPAddress = 'localhost',
+
+        [Parameter()]
+        [Int]
+        $Port = 443
     )
 
-    $resp = Invoke-WebRequest -UseBasicParsing -Uri "https://${EventDestination}/end" -ErrorAction SilentlyContinue
+    $resp = Invoke-WebRequest -UseBasicParsing -Uri "https://${IPAddress}:${Port}/end" -ErrorAction SilentlyContinue
     if ($resp)
     {
         Write-Verbose -Message 'Event Listener stopped!'
