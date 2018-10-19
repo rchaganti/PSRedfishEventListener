@@ -4,9 +4,10 @@ theme: readthedocs
 pages:
   - Home: index.md
   - Add-PSRedfishEventListenerHttpsBinding: Add-PSRedfishEventListenerHttpsBinding.md
+  - Get-PSRedfishEventSubscription: Get-PSRedfishEventSubscription.md
   - Remove-PSRedfishEventListenerHttpsBinding: Remove-PSRedfishEventListenerHttpsBinding.md
+  - Register-PSRedfishEventSubscription: Register-PSRedfishEventSubscription.md
   - Start-PSRedfishEventListener: Start-PSRedfishEventListener.md
   - Stop-PSRedfishEventListener: Stop-PSRedfishEventListener.md
   - Send-PSRedfishTestEvent: Send-PSRedfishTestEvent.md
-  - Register-PSRedfishEventSubscription: Register-PSRedfishEventSubscription.md
   - Unregister-PSRedfishEventSubscription: Unregister-PSRedfishEventSubscription.md
