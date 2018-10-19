@@ -1,0 +1,12 @@
+site_name: Redfish Event Listener in PowerShell
+repo_url: https://github.com/rchaganti/PSRedfishListener
+theme: readthedocs
+pages:
+  - Home: index.md
+    - Add-PSRedfishEventListenerHttpsBinding: Add-PSRedfishEventListenerHttpsBinding.md
+    - Remove-PSRedfishEventListenerHttpsBinding: Remove-PSRedfishEventListenerHttpsBinding.md
+    - Start-PSRedfishEventListener: Start-PSRedfishEventListener.md
+    - Stop-PSRedfishEventListener: Stop-PSRedfishEventListener.md
+    - Send-PSRedfishTestEvent: Send-PSRedfishTestEvent.md
+    - Register-PSRedfishEventSubscription: Register-PSRedfishEventSubscription.md
+    - Unregister-PSRedfishEventSubscription: Unregister-PSRedfishEventSubscription.md
