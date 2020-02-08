@@ -37,6 +37,9 @@ function Register-PSRedfishEventSubscription
         Credential = $Credential
         Uri = "https://${IPAddress}/redfish/v1/EventService/Subscriptions"
         Body = $bodyJson
+        Headers = @{
+            Accept = "*/*"
+        }
     }
 
     Invoke-RestMethod @postParameters -Verbose

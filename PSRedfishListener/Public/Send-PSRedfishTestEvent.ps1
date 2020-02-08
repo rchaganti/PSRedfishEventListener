@@ -51,6 +51,9 @@ function Send-PSRedfishTestEvent
             Credential = $Credential
             Body = $bodyJson
             ContentType= 'application/json'
+            Headers = @{
+                Accept = "*/*"
+            }            
         }
         Write-Verbose -Message "Invoking SubmitTestEvent method on ${IPAddress} ..."
         Invoke-RestMethod @parameters
